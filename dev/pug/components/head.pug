@@ -1,0 +1,24 @@
+head
+	// Пути для css, js и изображений
+	- path = {css: 'assets/css', js: 'assets/js', img: 'assets/img'};
+	// блок с meta 
+	meta(charset="UTF-8")
+	title Start
+	meta(name="description", content="")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+	meta(property="og:image", content = path.img + "/image.jpg")
+	// блок с favicon
+	link(rel="shortcut icon", href = path.img + "/favicon/favicon.ico", type="image/x-icon")
+	link(rel="apple-touch-icon", href = path.img + "/favicon/apple-touch-icon.png")
+	link(rel="apple-touch-icon", sizes="72x72", href = path.img + "/favicon/apple-touch-icon-72x72.png")
+	link(rel="apple-touch-icon", sizes="114x114", href = path.img + "/favicon/apple-touch-icon-114x114.png")
+	// цвет в мобильной версии
+	meta(name="theme-color" content="#000")
+	meta(name="msapplication-navbutton-color" content="#000")
+	meta(name="apple-mobile-web-app-status-bar-style" content="#000")
+	// подключение сss
+	link(rel="stylesheet", href = path.css + "/main.min.css")
+
+	
+

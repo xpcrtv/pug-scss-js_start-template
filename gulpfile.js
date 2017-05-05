@@ -150,7 +150,7 @@ gulp.task('css', function () {
     .pipe(browserSync.stream()); // Работа метода stream без опций
 });
 
-// Таск для объединения и минификации JS-файлов:
+// Задача для объединения и минификации JS-файлов:
 gulp.task('js', function () {
   return gulp.src(paths.dev.js.src) //Источник js-файла(ов)
     .pipe(plumber()) // Обработка ошибок при работе плагинов обработки js-файлов
@@ -169,7 +169,7 @@ gulp.task('img', function () {
     .pipe(gulp.dest(paths.img.dest)); // Директория в которую сохраняется результат работы задачи
 });
 
-//Генерация спрайта 
+// Генерация спрайта 
 gulp.task('sprite', function () {
   var spriteData =
     gulp.src(paths.sprites.src) // Источник изображений для спрайта
@@ -234,11 +234,11 @@ gulp.task('clean', function () {
   return del(paths.dirs.dist);
 });
 
-//Подготовка структуры
+// Подготовка структуры
 gulp.task('prepare', ['html', 'css', 'js']);
 
 
-//Перенос html,css,js,шрифтов и остальных необходимых файлов в директорию "prod/"
+// Перенос html,css,js,шрифтов и остальных необходимых файлов в директорию "prod/"
 gulp.task('replace', function () {
   var htmlProd = gulp.src(paths.prod.html.src)
     .pipe(gulp.dest(paths.prod.html.dest)); // Перенос html-файлов

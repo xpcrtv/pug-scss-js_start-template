@@ -18,7 +18,8 @@ var gulp          = require('gulp'),                // Сам Gulp
     ftp           = require('vinyl-ftp'),           // Отправка файлов через Ftp
     spritesmith   = require('gulp.spritesmith'),    // Создание спрайтов
     zip           = require('gulp-zip'),            // Архивировация файлов и директорий
-    runSequence   = require('run-sequence');        // Последовательный запуск задач
+    runSequence   = require('run-sequence'),        // Последовательный запуск задач
+    csscomb       = require('gulp-csscomb');        // Форматирование css-стилей
 
 // Переменные путей, задданых для использования в задачах
 var paths = {
@@ -144,13 +145,14 @@ gulp.task('css', function () {
     .pipe(rename({
       suffix: '.min'
     })) // Переименование файла(ов) с добавлением в название .min (Например: main.css в main.min.css)
+    .pipe(csscomb()) // Форматирование, сортировка стилей
     .pipe(csso()) // Минификация файла(ов), без опций
-    .pipe(sourcemaps.write()) // Добавление sourcemap в файл
+    .pipe(sourcemaps.write("./")) // Добавление sourcemap в файл
     .pipe(gulp.dest(paths.dev.css.dest)) // Директория в которую сохраняется результат работы задачи
     .pipe(browserSync.stream()); // Работа метода stream без опций
 });
 
-// Задача для объединения и минификации JS-файлов:
+// Таск для объединения и минификации JS-файлов:
 gulp.task('js', function () {
   return gulp.src(paths.dev.js.src) //Источник js-файла(ов)
     .pipe(plumber()) // Обработка ошибок при работе плагинов обработки js-файлов
@@ -169,7 +171,7 @@ gulp.task('img', function () {
     .pipe(gulp.dest(paths.img.dest)); // Директория в которую сохраняется результат работы задачи
 });
 
-// Генерация спрайта 
+//Генерация спрайта 
 gulp.task('sprite', function () {
   var spriteData =
     gulp.src(paths.sprites.src) // Источник изображений для спрайта
@@ -234,11 +236,11 @@ gulp.task('clean', function () {
   return del(paths.dirs.dist);
 });
 
-// Подготовка структуры
+//Подготовка структуры
 gulp.task('prepare', ['html', 'css', 'js']);
 
 
-// Перенос html,css,js,шрифтов и остальных необходимых файлов в директорию "prod/"
+//Перенос html,css,js,шрифтов и остальных необходимых файлов в директорию "prod/"
 gulp.task('replace', function () {
   var htmlProd = gulp.src(paths.prod.html.src)
     .pipe(gulp.dest(paths.prod.html.dest)); // Перенос html-файлов

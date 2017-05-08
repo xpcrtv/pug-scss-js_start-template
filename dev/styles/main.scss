@@ -2,5 +2,7 @@
 @import "fonts";
 @import "vars";
 @import "sprite";
-//подключение компонентов
+// Подключение библиотек
+@import "libs/bootstrap/bootstrap";
+// Подключение компонентов
 @import 'components/footer';

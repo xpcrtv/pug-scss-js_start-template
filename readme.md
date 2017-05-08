@@ -16,6 +16,7 @@
 		</ul>
 	</li>
 	<li><b>prod/..</b> - Директория с подготовленными на production файлами</li>
+	<li><b>.csscomb.json</b> - Файл с конфигурацией плагина <a href="https://github.com/csscomb/csscomb.js" title="github.com/csscomb/csscomb.js">СSSComb</a></li>
 	<li><b>gulpfile.js</b> - Файл с конфигурацией <a href="http://gulpjs.com/" title="gulpjs.com">Gulp</a></li>
 	<li><b>package.json</b> - Файл с информацией о проекте и всех использованных зависимостях</li>
 

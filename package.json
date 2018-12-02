@@ -11,6 +11,7 @@
   "author": "expcoder",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",

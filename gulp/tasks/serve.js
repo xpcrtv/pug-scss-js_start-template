@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 
+const { reload } = browserSync;
 // Static server
 const serve = () => {
   browserSync.create();
@@ -11,8 +12,7 @@ const serve = () => {
       notify: false
     }
   });
+  gulp.watch('./dev/pug/**/*.pug', gulp.task('pug'), reload);
 };
-
-gulp.task('serve', serve);
 
 module.exports = serve;

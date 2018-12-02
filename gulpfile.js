@@ -1,3 +1,3 @@
-const gulp = require('./gulp')(['serve']);
+const gulp = require('./gulp')(['serve', 'pug']);
 
-gulp.task('default', gulp.series(['serve']));
+gulp.task('default', gulp.series(['serve', 'pug']));

@@ -1,0 +1,4 @@
+dist
+node_modules
+dev/scripts/libs/*.*
+dev/assets/js/scripts.min.js

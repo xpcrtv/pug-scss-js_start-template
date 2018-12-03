@@ -1,48 +1,58 @@
-<h1>Стартовый шаблон для верстки</h1>
+# Стартовый шаблон для верстки
 
-<p>Стартовый шаблон для верстки, с использованием <a href="https://pugjs.org/api/getting-started.html" title="pugjs.org">Pug</a>-шаблонизатора, <a href="http://sass-lang.com/" title="sass-lang.com">SASS</a>-препроцессора и js.</p>
-<p>Сборка осуществляется с помощью <a href="http://gulpjs.com/" title="gulpjs.com">Gulp</a></p>
-<hr>
-<h2>Структура:</h2>
-<ul>
-	<li><b>dev/..</b> - Рабочая директория
-		<ul>
-			<li><b>assets/..</b> - Директория с обработанными файлами, всеми изображениями, спрайтами, а также шрифтами</li>
-			<li><b>pug/..</b> - Директория с pug-файлами</li>
-			<li><b>scripts/..</b> - Директория со всеми скриптами проекта</li>
-			<li><b>styles/..</b> - Директория с файлами стилей проекта в формате ".scss"</li>
-			<li><b>.htaccess</b> - Конфигурационный файл веб-сервера </li>
-			<li><b>index.html</b> - Стартовая страница</li>
-		</ul>
-	</li>
-	<li><b>prod/..</b> - Директория с подготовленными на production файлами</li>
-	<li><b>.csscomb.json</b> - Файл с конфигурацией плагина <a href="https://github.com/csscomb/csscomb.js" title="github.com/csscomb/csscomb.js">СSSComb</a></li>
-	<li><b>gulpfile.js</b> - Файл с конфигурацией <a href="http://gulpjs.com/" title="gulpjs.com">Gulp</a></li>
-	<li><b>package.json</b> - Файл с информацией о проекте и всех использованных зависимостях</li>
+Стартовый шаблон для верстки, с использованием [Pug](https://pugjs.org/api/getting-started.html 'pugjs.org')-шаблонизатора, [SASS](http://sass-lang.com/ 'sass-lang.com')-препроцессора и js.
 
-</ul>
-<hr>
-<h2>Gulp задачи (таски):</h2>
-<h3>Основные:</h3>
-<ul>
-	<li><b>gulp</b>: Запуск задачи по-умолчанию. По-умолчанию запускает "prepare" и "server"</li>
-	<li><b>gulp build</b>: Сборка проекта. Последовательно выполняет "clean", "sprite", "img" и "replace";</li>
-	<li><b>gulp deploy</b>: Выгрузка файлов по ftp на сервер ;</li>
-	<li><b>gulp zip</b>: Архивация иректории с подготовленными на production файлами;</li>
-	<li><b>gulp zipall</b>: Архивация проекта целиком;</li>
-</ul>
-<h3>Вспомогательные:</h3>
-<ul>
-	<li><b>gulp server</b>: Запуск browserSync, и слежения за изменениями в файлах;</li>
-	<li><b>gulp img</b>: Обработка изображений и перенос их из development-папки в production;</li>
-	<li><b>gulp sprite</b>: Генерация спрайта;</li>
-	<li><b>gulp html</b>: Преобразование pug-файлов в html-файлы;</li>
-	<li><b>gulp css</b>: Преобразование scss-файорв в css c оптимизацией и минификацией;</li>
-	<li><b>gulp js</b>: Задача для объединения и минификации JS-файлов;</li>
-	<li><b>gulp clearcache</b>: Очистка кэша;</li>
-	<li><b>gulp clean</b>: Очистка папки "prod/" путем удаления их нее всех файлов;</li>
-	<li><b>gulp prepare</b>: Подготовка структуры;</li>
-	<li><b>gulp replace</b>: Перенос html,css,js,шрифтов и остальных необходимых файлов в директорию "prod/";</li>
-</ul>
+Сборка осуществляется с помощью [Gulp](http://gulpjs.com/ 'gulpjs.com')
 
+---
 
+## Gulp задачи (таски):
+
+### Основные:
+
+- **npm start**: Запуск сервера для верстки
+- **npm build**: Сборка проекта.
+
+---
+
+## Структура:
+
+- **dev/..** - Рабочая директория
+  - **assets/..** - Директория с обработанными файлами, всеми изображениями, спрайтами, а также шрифтами
+  - **pug/..** - Директория с pug-файлами
+  - **scripts/..** - Директория со всеми скриптами проекта
+  - **styles/..** - Директория с файлами стилей проекта в формате ".scss"
+  - **.htaccess** - Конфигурационный файл веб-сервера
+  - **index.html** - Стартовая страница
+- **dist/..** - Директория с подготовленными на production файлами
+- **gulp/..** - Директория с конфигурационным файлом и фалами тасков
+- **.csscomb.json** - Файл с конфигурацией плагина [СSSComb](https://github.com/csscomb/csscomb.js 'github.com/csscomb/csscomb.js')
+- **gulpfile.js** - Файл с конфигурацией [Gulp](http://gulpjs.com/ 'gulpjs.com')
+
+---
+
+### Список зависимостей:
+
+[Gulp-babel](https://github.com/babel/gulp-babel),
+[browser-sync](https://github.com/Browsersync/browser-sync),
+[del](https://github.com/sindresorhus/del),
+[eslint](https://github.com/eslint/eslint),
+[eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base),
+[eslint-config-prettier](https://github.com/prettier/eslint-config-prettier),
+[eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import),
+[eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier),
+[gulp](https://gulpjs.com/),
+[gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer),
+[gulp-babel](https://github.com/babel/gulp-babel),
+[gulp-csscomb](https://github.com/koistya/gulp-csscomb),
+[gulp-csso](https://github.com/ben-eb/gulp-csso),
+[gulp-htmlmin](https://github.com/jonschlinkert/gulp-htmlmin),
+[gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin),
+[gulp-pug](https://github.com/gulp-community/gulp-pug),
+[gulp-rename](https://github.com/hparra/gulp-rename),
+[gulp-sass](https://github.com/dlmanning/gulp-sass),
+[gulp-uglify](https://github.com/terinjokes/gulp-uglify/),
+[gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith),
+[node-sass](https://github.com/sass/node-sass),
+[prettier](https://github.com/prettier/prettier),
+[require-dir](https://github.com/aseemk/requireDir)

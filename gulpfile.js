@@ -1,3 +1,3 @@
-const gulp = require('./gulp')(['serve', 'pug']);
+const requireDir = require('require-dir');
 
-gulp.task('default', gulp.series(['serve', 'pug']));
+const dir = requireDir('./gulp/tasks', { recurse: true });

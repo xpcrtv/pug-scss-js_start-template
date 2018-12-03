@@ -1,0 +1,38 @@
+{
+  "dirs": { "dev": "./dev", "dist": "./dist" },
+  "dev": {
+    "html": { "src": "./dev/pug/*.pug", "dest": "./dev" },
+    "css": {
+      "src": "./dev/styles/**/*.{scss, sass}",
+      "dest": "./dev/assets/css"
+    },
+    "js": {
+      "src": "./dev/scripts/scripts.js",
+      "dest": "./dev/assets/js"
+    }
+  },
+  "watch": {
+    "pug": "./dev/pug/**/*.pug",
+    "css": "./dev/styles/**/*.{scss, sass}",
+    "js": "./dev/scripts/**/*.js",
+    "html": "./dev/*.html"
+  },
+  "sprites": {
+    "src": "./dev/assets/img/sprites/*.*",
+    "srcRetina": "./dev/assets/img/sprites/**/*@2x.*",
+    "dest": "./dev/assets/img",
+    "destStyle": "./dev/style",
+    "imgPath": "../img/sprite.png",
+    "retinaImgPath": "../img/sprite@2x.png"
+  },
+  "dist": {
+    "img": { "src": "./dev/assets/img/**/*", "dest": "./dist/assets/img" },
+    "html": { "src": "./dev/*.html", "dest": "./dist" },
+    "css": { "src": "./dev/assets/css/*.css", "dest": "./dist/assets/css" },
+    "js": { "src": "./dev/scripts/scripts.js", "dest": "./dist/assets/js" },
+    "fonts": {
+      "src": "./dev/assets/fonts/**/*.*",
+      "dest": "./dist/assets/fonts"
+    }
+  }
+}

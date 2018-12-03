@@ -1,8 +1,7 @@
 // Подключение шрифтов и переменных
-@import "fonts";
-@import "vars";
-@import "sprite";
-// Подключение библиотек
-@import "libs/bootstrap/bootstrap";
+@import 'fonts';
+@import 'vars';
+@import 'sprite';
 // Подключение компонентов
+@import 'components/header';
 @import 'components/footer';

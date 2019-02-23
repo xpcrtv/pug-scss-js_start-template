@@ -15,7 +15,7 @@ gulp.task('pug:build', () =>
 );
 gulp.task('pug', () =>
   gulp
-    .src(config.watch.pug)
+    .src(config.dev.html.src)
     .pipe(
       pug({
         pretty: true

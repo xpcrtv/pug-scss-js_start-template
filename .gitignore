@@ -5,3 +5,4 @@
 /**/*.psd
 /**/Thumbs.db
 *.map
+*-lock.json

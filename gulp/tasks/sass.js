@@ -7,21 +7,22 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 const config = require('../config');
 
-gulp.task('sass', () =>
+gulp.task('sass', (done) => {
   gulp
     .src(config.dev.css.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(csscomb())
     .pipe(
       rename({
-        suffix: '.min'
-      })
+        suffix: '.min',
+      }),
     )
     .pipe(gulp.dest(config.dev.css.dest))
-    .pipe(browserSync.stream())
-);
+    .pipe(browserSync.stream());
+  done();
+});
 
-gulp.task('sass:build', () =>
+gulp.task('sass:build', (done) => {
   gulp
     .src(config.dist.css.src)
     .pipe(sass().on('error', sass.logError))
@@ -29,8 +30,9 @@ gulp.task('sass:build', () =>
     .pipe(csscomb())
     .pipe(
       csso({
-        comments: false
-      })
+        comments: false,
+      }),
     )
-    .pipe(gulp.dest(config.dist.css.dest))
-);
+    .pipe(gulp.dest(config.dist.css.dest));
+  done();
+});

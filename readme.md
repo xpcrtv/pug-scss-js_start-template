@@ -1,10 +1,12 @@
-# Стартовый шаблон для верстки
+# Стартовый шаблон для верстки 📃
 
 Стартовый шаблон для верстки, с использованием [Pug](https://pugjs.org/api/getting-started.html 'pugjs.org')-шаблонизатора, [SASS](http://sass-lang.com/ 'sass-lang.com')-препроцессора и js.
 
 Сборка осуществляется с помощью [Gulp](http://gulpjs.com/ 'gulpjs.com')
 
----
+## Важно ⚠
+  Вместо оригинальной библиотеки [gulp-csscomb](https://github.com/koistya/gulp-csscomb) используется форк [xpcrtv/gulp-csscomb](https://github.com/xpcrtv/gulp-csscomb)
+
 
 ## Gulp задачи (таски):
 
@@ -44,7 +46,7 @@
 [gulp](https://gulpjs.com/),
 [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer),
 [gulp-babel](https://github.com/babel/gulp-babel),
-[gulp-csscomb](https://github.com/koistya/gulp-csscomb),
+[gulp-csscomb](https://github.com/koistya/gulp-csscomb) [*](#Важно), 
 [gulp-csso](https://github.com/ben-eb/gulp-csso),
 [gulp-htmlmin](https://github.com/jonschlinkert/gulp-htmlmin),
 [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin),
